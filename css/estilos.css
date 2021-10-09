@@ -1,0 +1,238 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    min-height: 100vh;
+ 
+}
+/*tiulo 1*/
+.titulo1>h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 155%;
+    color: rgba(0, 89, 255, 0.966);
+    transform: translatex(50%); 
+}
+
+.contenedor_slider{
+    width: 50%;
+    max-width: 900px;
+    margin: 60px  ;
+    
+}
+.slider_img{
+    display:block;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.slider{
+    
+    display: flex;
+    width:200%;
+    height: 200%;
+}
+.slider_section{
+    width: 150%;
+}
+.slider_btn{
+  position: absolute;  
+  width: 40px;
+  height: 40px;
+  background-color: rgb(247, 165, 59);
+  top:50%;
+  transform: translateY(-100%);
+  font-size: 30px;
+  font-family: monospace;
+  text-align: center;
+  border-radius: 50%;
+  cursor:pointer;
+}
+/*botones*/
+.form2{
+    transform: translatex(-4%);
+background-color: turquoise;
+width: 1590px;
+height: 110px;
+}
+.boton1, .boton3, .boton4{
+    background-color: 	#D2691E;   
+    padding: 9px 5px;
+    font-style: normal;
+    font-weight: 50px;
+    font-size: 20px;
+    line-height: 22px;
+    
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-top: 20px;
+    transform: translatex(500%);
+    text-decoration: none;
+    }
+
+.boton2{
+    background-color: 	#08637a;   
+    padding: 10px 5px;
+    font-style: normal;
+    font-weight: 50;
+    font-size: 20px;
+    line-height: 22px;
+   
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-top: 20px;
+    transform: translatex(150%);
+    text-decoration: none;
+}
+.boton3{
+    background-color: 	#b823bd;   
+    transform: translatex(150%);
+}
+.boton4{
+    
+    background-color: 	#15a11c;   
+    
+}
+
+/*boton de click*/
+.abrirM{
+    display: inline-block;
+    border: 5px solid;
+    padding: 7px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    background-color: rgba(223, 222, 222, 0.74);
+    color: rgba(255, 36, 36, 0.904);
+    transform: translateX(530%) translateY(-1985%); 
+    
+}
+
+    /* PROGRAMACION DE LA VENTANA EMERGENTE MODAL */
+    
+    .modal-container{
+    z-index:900;
+      position: fixed;  /* esto se puso al final y posisiono el cuadro arriba */
+       border: 3px solid;
+       width: 100%;
+       height: 100vh; /* esto se llma aviopur entorno de plantilla  */
+       top: 0;
+       left: 0;
+       background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+     
+    }
+     
+    .modal{
+        width: 40%;
+        height: 50%;
+        background-color: rgba(255, 208, 55, 0.575);
+        text-align: center;
+        overflow: hidden;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 25px;
+        position: relative; /* se agrega para que close x no salga del cuaadro */
+        transition:transform 1s;
+        transform: translateX(20%);
+    }
+    
+    .modal img{
+    width: 50%;
+    }
+    
+    .close{
+    position:absolute;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+    background-color:orange;
+    top:25px;
+    top: 25px;
+    right: 25px;
+    color:white;
+    line-height: 25px;
+    cursor:pointer
+    }
+    
+    .modal-close{
+    transform:translateY(-50%);
+    
+    }
+    
+ 
+/*estilos del formulario meregente*/
+.formulario{
+    
+    width: 120%;
+    height: 220px;
+    transform:translateX(-10%);
+}
+.formulario>legend{
+    transform:translatey(-380%);
+    width: 90%;
+    height: 20px;
+    
+}
+fieldset{
+    transform:translatey(25%) translatex(-10%);
+    border:6px groove #ccc;
+    background: rgba(221, 133, 17, 0.829);
+    height: 40px;
+}
+
+h3{
+    color: rgb(241, 7, 7);
+    transform:translatey(250%);
+}
+
+
+/*Boton desplegable*/
+#boton-mas{
+	display: none;  
+  }
+  .iconos{
+	  position: fixed;
+	  bottom: 20px;
+	  right: 20px;
+  }
+  .redes a, .icon-plus{
+	 display: block;
+	 text-decoration: none;
+	 background:rgba(47, 240, 224, 0.904);
+	 color: white;
+	 width: 55px;
+	 height: 55px;
+	 line-height: 55px;
+	 text-align: center;
+	 border-radius: 50%;
+	 box-shadow: 0px 1px 10px rgba(0,0,0,0,4);
+	 transition: all 500ms ease;
+  }
+  .redes a:hover{
+    background: rgb(231, 220, 63);
+    color: #050505;
+}
+.redes a{
+    margin-bottom: -15px ;
+    opacity: 0;
+    visibility: hidden;
+}
+#boton-mas:checked~ .redes a{
+    margin-bottom: 10%;
+    opacity: 1;
+    visibility: visible;
+}
