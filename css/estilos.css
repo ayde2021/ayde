@@ -51,9 +51,9 @@ body{
 }
 /*botones*/
 .form2{
-    transform: translatex(-4%);
-background-color: turquoise;
-width: 1590px;
+    transform: translatex(-5%);
+background-color: rgb(27, 218, 113);
+width: 1470px;
 height: 110px;
 }
 .boton1, .boton3, .boton4{
@@ -70,8 +70,9 @@ height: 110px;
     box-sizing: border-box;
     border-radius: 15px;
     margin-top: 20px;
-    transform: translatex(500%);
+    
     text-decoration: none;
+    
     }
 
 .boton2{
